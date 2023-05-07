@@ -1,8 +1,8 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 
-import {Icon} from '@rneui/themed';
 import {COLORS, PARAMETERS} from '../global/styles';
+import {Icon} from '@rneui/themed';
 import {horizontalScale, verticalScale} from '../utils/Dim';
 const Header = ({title, type}: any) => {
   return (

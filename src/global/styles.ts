@@ -47,3 +47,4 @@ export const TITLE: TextStyle = {
   fontSize: verticalScale(20),
   fontWeight: 'bold',
 };
+
