@@ -4,6 +4,7 @@ import SigninScreen from './src/screens/authScreens/SigninScreen';
 import {View} from 'react-native-animatable';
 import {StatusBar} from 'react-native';
 import {COLORS} from './src/global/styles';
+import SigninWelcomeScreen from './src/screens/authScreens/SigninWelcomeScreen';
 
 const App = () => {
   return (
@@ -12,7 +13,8 @@ const App = () => {
         backgroundColor={COLORS.StatusBar}
         barStyle={'light-content'}
       />
-      <SigninScreen />
+      {/*  <SigninScreen /> */}
+      <SigninWelcomeScreen />
     </View>
   );
 };
