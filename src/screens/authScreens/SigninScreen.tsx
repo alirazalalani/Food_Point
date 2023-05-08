@@ -1,18 +1,10 @@
-import {
-  StyleProp,
-  StyleSheet,
-  Text,
-  TextInput,
-  View,
-  ViewStyle,
-} from 'react-native';
+import {StyleSheet, Text, TextInput, View} from 'react-native';
 import React, {useState, useRef} from 'react';
 import {COLORS, PARAMETERS, TITLE} from '../../global/styles';
 import Header from '../../components/Header';
 import {horizontalScale, verticalScale} from '../../utils/Dim';
 import * as Animatable from 'react-native-animatable';
 import {Icon} from '@rneui/base';
-
 import {Button, SocialIcon} from '@rneui/themed';
 const SigninScreen = () => {
   const [focusedTextInput, setFocusedTextInput] = useState<boolean>(false);
