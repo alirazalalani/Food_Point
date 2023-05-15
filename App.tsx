@@ -1,10 +1,7 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, View, StatusBar} from 'react-native';
 import React from 'react';
-import SigninScreen from './src/screens/authScreens/SigninScreen';
-import {View} from 'react-native-animatable';
-import {StatusBar} from 'react-native';
 import {COLORS} from './src/global/styles';
-import SigninWelcomeScreen from './src/screens/authScreens/SigninWelcomeScreen';
+import RootNavigator from './src/navigation/RootNavigator/RootNavigator';
 
 const App = () => {
   return (
@@ -13,8 +10,8 @@ const App = () => {
         backgroundColor={COLORS.StatusBar}
         barStyle={'light-content'}
       />
-      {/*  <SigninScreen /> */}
-      <SigninWelcomeScreen />
+      
+      <RootNavigator />
     </View>
   );
 };

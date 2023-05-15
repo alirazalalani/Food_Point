@@ -17,6 +17,7 @@ export const COLORS = {
   Cardbackground: 'white',
   StatusBar: '#ff8c52',
   HeaderText: 'white',
+  lightgreen: '#66DF48',
 };
 
 export const PARAMETERS: stylesType = {
@@ -47,4 +48,3 @@ export const TITLE: TextStyle = {
   fontSize: verticalScale(20),
   fontWeight: 'bold',
 };
-
