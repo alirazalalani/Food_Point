@@ -6,16 +6,23 @@ import {horizontalScale, verticalScale} from '../../utils/Dim';
 import * as Animatable from 'react-native-animatable';
 import {Icon} from '@rneui/base';
 import {Button, SocialIcon} from '@rneui/themed';
+import {useNavigation} from '@react-navigation/native';
+
 const SigninScreen = () => {
   const [focusedTextInput, setFocusedTextInput] = useState<boolean>(false);
   const [focusedTextInput2, setFocusedTextInput2] = useState<boolean>(false);
 
   const animateTextInput1: any = useRef(1);
   const animateTextInput2: any = useRef(2);
+  const navigation: any = useNavigation();
 
   return (
     <View style={styles.container}>
-      <Header title={'MY ACCOUNT'} type={'arrow-left'} />
+      <Header
+        title={'MY ACCOUNT'}
+        type={'arrow-left'}
+        navigation={navigation}
+      />
 
       <View
         style={{marginLeft: horizontalScale(20), marginTop: verticalScale(10)}}>
@@ -98,6 +105,9 @@ const SigninScreen = () => {
           containerStyle={{
             marginHorizontal: 20,
             marginTop: verticalScale(30),
+          }}
+          onPress={() => {
+            navigation.navigate('DrawerNavigator');
           }}
         />
       </View>

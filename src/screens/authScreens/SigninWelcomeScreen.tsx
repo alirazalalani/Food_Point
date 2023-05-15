@@ -3,9 +3,11 @@ import React from 'react';
 import Swiper from 'react-native-swiper';
 import {Button} from '@rneui/themed';
 import {horizontalScale, verticalScale} from '../../utils/Dim';
-import {COLORS, TITLE, PARAMETERS} from '../../global/styles';
+import {COLORS, PARAMETERS} from '../../global/styles';
+import {useNavigation} from '@react-navigation/native';
 
 const SigninWelcomeScreen = () => {
+  const navigation: any = useNavigation();
   return (
     <View style={{flex: 1}}>
       <View
@@ -55,6 +57,9 @@ const SigninWelcomeScreen = () => {
           containerStyle={{
             marginTop: verticalScale(30),
             marginBottom: verticalScale(20),
+          }}
+          onPress={() => {
+            navigation.navigate('SignInScreen');
           }}
         />
         <Button

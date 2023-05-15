@@ -1,9 +1,10 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+
 import {COLORS, PARAMETERS} from '../global/styles';
 import {Icon} from '@rneui/themed';
 import {horizontalScale, verticalScale} from '../utils/Dim';
-const Header = ({title,type}: any) => {
+const Header = ({title, type, navigation}: any) => {
   return (
     <View style={styles.header}>
       <Icon
@@ -11,7 +12,9 @@ const Header = ({title,type}: any) => {
         name={type}
         color={COLORS.HeaderText}
         size={28}
-        onPress={() => {}}
+        onPress={() => {
+          navigation.goBack();
+        }}
       />
       <Text style={styles.headerText}>{title}</Text>
     </View>
